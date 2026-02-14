@@ -49,6 +49,7 @@ alembic upgrade head
 uvicorn app.main:app --reload
 Документация API будет доступна по адресу:
 http://127.0.0.1:8000/docs
+```
 
 🔑 Переменные окружения (.env)
 Пример заполнения файла .env:
@@ -65,4 +66,4 @@ PROJECT_ID=ваш-project-id
 PRIVATE_KEY_ID=ваш-key-id
 PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nваш-ключ\n-----END PRIVATE KEY-----\n"
 CLIENT_EMAIL=ваш-email@project.iam.gserviceaccount.com
-<div align="center"> <sub>Сделано с ❤️</sub> </div> ```
+<div align="center"> <sub>Сделано с ❤️</sub> </div>
