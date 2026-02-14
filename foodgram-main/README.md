@@ -70,14 +70,6 @@ docker compose -f infra/docker-local.yml exec backend python manage.py createsup
 После запуска проект будет доступен по адресу http://localhost:8000
 ```
 
-## 🌐 Демо-версия
-
-Проект доступен по адресу https://kittygramlazyx.zapto.org/
-
-Администратор
-Email: gusiev2003@mail.ru
-Пароль: Sportland
-
 ---
 
 <div align="center">
