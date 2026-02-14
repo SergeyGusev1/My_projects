@@ -9,11 +9,17 @@
 - 📈 Выгрузка отчётов в Google Таблицы
 
 ## 🛠 Стек технологий
-![Python](https://img.shields.io/badge/Python-3.10-blue?style=flat-square&logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-✓-green?style=flat-square&logo=fastapi)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-✓-red?style=flat-square)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-✓-blue?style=flat-square&logo=postgresql)
-![Google Sheets API](https://img.shields.io/badge/Google%20Sheets%20API-✓-green?style=flat-square&logo=google)
+- Python 3.10
+- FastAPI
+- SQLAlchemy + Alembic
+- PostgreSQL / SQLite
+- Pytest
+- Google Sheets API v4
+- Google Drive API v3
+
+## 📝 О проекте
+
+Проект автоматически распределяет пожертвования между открытыми сборами. Когда сумма пожертвований достигает целевой - проект закрывается. Отчёты можно выгружать в Google Sheets для анализа.
 
 ## 🚀 Быстрый старт
 
@@ -24,13 +30,16 @@ cd QRkot_spreadsheets
 
 # Создать виртуальное окружение
 python -m venv venv
-source venv/Scripts/activate  # Windows
-# source venv/bin/activate    # Linux/Mac
+
+# Активировать (Windows)
+venv\Scripts\activate
+# Или (Mac/Linux)
+# source venv/bin/activate
 
 # Установить зависимости
 pip install -r requirements.txt
 
-# Настройка .env (скопировать и заполнить)
+# Настройка .env
 cp .env.example .env
 
 # Запустить миграции
@@ -38,19 +47,22 @@ alembic upgrade head
 
 # Запустить сервер
 uvicorn app.main:app --reload
-После запуска документация доступна по адресу:
-👉 http://127.0.0.1:8000/docs
+Документация API будет доступна по адресу:
+http://127.0.0.1:8000/docs
 
-📁 Структура .env
-Основные переменные для настройки:
+🔑 Переменные окружения (.env)
+Пример заполнения файла .env:
 
-text
-APP_TITLE=Название проекта
+env
+APP_TITLE=Сервис пожертвований
 DATABASE_URL=sqlite+aiosqlite:///./fastapi.db
 SECRET=ваш-секретный-ключ
-# Данные сервисного аккаунта Google
 EMAIL=email@example.com
-📝 О проекте
-Проект автоматически распределяет пожертвования между открытыми сборами и закрывает их при достижении цели. Отчёты формируются в Google Sheets для удобного анализа.
 
-<div align="center"> <sub>Сделано с ❤️ для благотворительности</sub> </div> ```
+# Данные сервисного аккаунта Google
+TYPE=service_account
+PROJECT_ID=ваш-project-id
+PRIVATE_KEY_ID=ваш-key-id
+PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nваш-ключ\n-----END PRIVATE KEY-----\n"
+CLIENT_EMAIL=ваш-email@project.iam.gserviceaccount.com
+<div align="center"> <sub>Сделано с ❤️</sub> </div> ```
