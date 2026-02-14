@@ -1,40 +1,40 @@
-# QRkot_spreadseets
-QRKot - сервис для сбора пожертвований на благотворительные проекты.
-Возможности:
-Создать благотворительный проект.
-Принимать пожертвования и автомитическое закрытия проектов когда сумма закрыта.
-Сделать отчёт в google sheet api.
+# QRkot_spreadsheets 🐱
 
-Используемые технологии: Python 3.10, FastAPI, SQLAlchemy, Alembic, PostgreSQL/SQLite, Pytest, Aiogoogle, Google Sheet API v4, Google Drive API v3
+Сервис для сбора пожертвований на благотворительные проекты с автоматическим закрытием сборов и экспортом отчётов в Google Sheets.
 
-Руководство по локальному запуску:
+## ✨ Возможности
+- 📊 Создание благотворительных проектов
+- 💸 Приём пожертвований
+- ✅ Автоматическое закрытие проекта при достижении цели
+- 📈 Выгрузка отчётов в Google Таблицы
 
-Клонирование репозитория: git clone https://github.com/SergeyGusev1/cat_charity_fund.git cd cat_charity_fund
+## 🛠 Стек технологий
+![Python](https://img.shields.io/badge/Python-3.10-blue?style=flat-square&logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-✓-green?style=flat-square&logo=fastapi)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-✓-red?style=flat-square)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-✓-blue?style=flat-square&logo=postgresql)
+![Google Sheets API](https://img.shields.io/badge/Google%20Sheets%20API-✓-green?style=flat-square&logo=google)
 
-Создать и активировать виртуальное окружение: python -m venv venv source venv/Scripts/activate
+## 🚀 Быстрый старт
 
-Установить зависимости: pip install -r requirements.txt
+```bash
+# Клонировать репозиторий
+git clone https://github.com/SergeyGusev1/QRkot_spreadsheets.git
+cd QRkot_spreadsheets
 
-Создать файл .env: cp .env.example .env
+# Создать виртуальное окружение
+python -m venv venv
+source venv/Scripts/activate  # Windows
+# source venv/bin/activate    # Linux/Mac
 
-Заполнить файл .env. Пример: 
-APP_TITLE=Сервис пожертвований
-DATABASE_URL=sqlite+aiosqlite:///./fastapi.db
-SECRET=secret
-TYPE=service_account
-PROJECT_ID=sergey-project-479611
-PRIVATE_KEY_ID=8587c71d3f10a487c34fdccc4c0d0a91b48eec63
-PRIVATE_KEY=-----BEGIN PRIVATE KEY-----\n\n-----END PRIVATE KEY-----\n
-CLIENT_EMAIL=lazyx3@sergey-project-479611.iam.gserviceaccount.com
-CLIENT_ID=114026429794968346006
-AUTH_URI=https://accounts.google.com/o/oauth2/auth
-TOKEN_URI=https://oauth2.googleapis.com/token
-AUTH_PROVIDER_X509_CERT_URL=https://www.googleapis.com/oauth2/v1/certs
-CLIENT_X509_CERT_URL=https://www.googleapis.com/robot/v1/metadata/x509/lazyx3%40sergey-project-479611.iam.gserviceaccount.com
-EMAIL=pypracticumstudents@gmail.com
+# Установить зависимости
+pip install -r requirements.txt
 
-Запустить миграции: alembic upgrade head
+# Настройка .env (скопировать и заполнить)
+cp .env.example .env
 
-Запустить проект: uvicorn app.main:app --reload
+# Запустить миграции
+alembic upgrade head
 
-OpenAPI по адресу: http://127.0.0.1:8000/docs
+# Запустить сервер
+uvicorn app.main:app --reload
