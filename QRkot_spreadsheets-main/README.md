@@ -53,17 +53,20 @@ http://127.0.0.1:8000/docs
 
 🔑 Переменные окружения (.env)
 Пример заполнения файла .env:
-
+```bash
 env
 APP_TITLE=Сервис пожертвований
 DATABASE_URL=sqlite+aiosqlite:///./fastapi.db
 SECRET=ваш-секретный-ключ
 EMAIL=email@example.com
+```
 
 # Данные сервисного аккаунта Google
+```bash
 TYPE=service_account
 PROJECT_ID=ваш-project-id
 PRIVATE_KEY_ID=ваш-key-id
 PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nваш-ключ\n-----END PRIVATE KEY-----\n"
 CLIENT_EMAIL=ваш-email@project.iam.gserviceaccount.com
+```
 <div align="center"> <sub>Сделано с ❤️</sub> </div>
