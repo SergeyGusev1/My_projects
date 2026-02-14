@@ -1,0 +1,17 @@
+Django==4.2.23
+asgiref>=3.8.1,<4.0
+sqlparse>=0.4.0,<0.6.0
+pytz>=2023.0,<2025.0
+djangorestframework>=3.14.0,<3.16.0
+django-filter>=23.0,<24.0
+drf-nested-routers>=0.93.0,<1.0.0
+drf-extra-fields>=3.0.0,<4.0.0
+djoser>=2.2.0,<3.0.0
+gunicorn>=21.0.0,<22.0.0
+pillow>=10.0.0,<11.0.0
+requests>=2.31.0,<3.0.0
+python-dotenv>=1.0.0,<2.0.0
+short-url>=1.0.0,<2.0.0
+django-extensions>=3.2.0,<4.0.0
+psycopg2-binary
+django-cors-headers
